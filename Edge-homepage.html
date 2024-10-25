@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Financial Platform for Smart Bettors </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "sans-serif";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #234B93;
+        }
+
+        .hero-banner {
+            background-image:url( "assets/imgs/edge-boost-hero.jpg"); 
+            background-size: cover;
+            width: 100%;
+            height: 852px;
+            margin:0;
+            padding:0;
+            position: relative;
+        }
+        .sign-in-button {
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #234B93;
+            background: rgba(255, 255, 255, 0.80);
+            color: #234B93;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+            position: absolute;
+            right: 37px;
+            top: 36px;
+        }
+        .sign-in-button-small{
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #234B93;
+            background: rgba(255, 255, 255, 0.80);
+            color: #234B93;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+        }
+        .cta-button {
+            display: flex;
+            padding: 15px 52px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 12px;
+            border: 2px solid #AC8F41;
+            background: #F3CD2F;
+            color: #234B93;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: sans-serif;
+            width:200px;
+        }
+        .hero-content-card {
+            height: 425px;
+            position: relative;
+            top:250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            z-index: 4;
+        }
+        .hero-content{
+            
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+        }
+        .content-overlay {
+            background-color: rgba(255, 255, 255, 0.87);
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 225px;
+            height: 500px;
+        }
+        .brand-logo {
+            width: 100%;
+    height: auto;
+    max-width: 600px; /* Optional: Set a max-width to prevent it from becoming too large */
+        }
+        .visa-logo{
+            max-width:150px;
+            width:100%;
+            height:auto;
+        }
+        .edge-boost-card {
+            border-radius: 16px;
+            box-shadow: 8px 8px 10px 0px #F8C761;
+        }
+        .tagline {
+            color: #355268;
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .benefits {
+            color: #234B93;
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .usp{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .reverse{
+            flex-direction: row-reverse;
+        }
+        .usp-description{
+            width:600px;
+            line-height: 1.5;
+        }
+        .usp-description h3{
+            color: #234B93;
+            font-family: sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+            padding-bottom:20px;
+            padding-bottom:.5em;
+        }
+        .usp-description p{
+            color: #355268;
+            font-family: sans-serif;
+            font-size: 24px;
+            padding-bottom:1em;
+        }
+        sup a{
+            font-size:16px;
+            color: #234B93;
+        }
+        sup { 
+            vertical-align: top; font-size: 0.6em; 
+        }
+        .cta-banner{
+            background: linear-gradient(90deg, #001C5B 0%, #5FA3D8 100%);
+            width: 100%;
+            height: 350px;
+            margin-top:100px;
+            padding:0;
+            overflow: hidden;
+            position: relative;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+        }
+        
+        .left-lines{
+            position: absolute;
+            top:-160px;
+            z-index: 0;
+            left:0px
+        }
+        .right-lines{
+            position: absolute;
+            top:-160px;
+            right:0px;
+            z-index: 0;
+            transform: rotate(180deg)
+        }
+        .cta-banner-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+        .cta-banner-content img{
+            width:100%;
+            max-width:600px;
+            height: auto;
+        }
+                
+        .cta-button2{
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #F8D136;
+            background: rgba(249, 203, 109, 0.00);
+            color: #F8D136;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .cta-banner-content h2{
+            color: #FFF;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .more-usp-container{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+            width:535px;
+        }
+        .more-usp{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #F4F4F4;
+        }
+        .more-usp-container h3 {
+            color: #234B93;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+        }
+        .more-usp-container p{
+            color: #355268;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        .footer-cta{
+            background-image: url("assets/imgs/edge-boost-footer.png");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-logo{
+            width: 600px;
+        }
+        footer {
+            background-color:#000;
+            color:rgb(200, 200, 200);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        footer a {
+            color:rgb(200, 200, 200);
+            text-decoration: none;
+        }
+        .footer-menu{
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .card{
+            width:100%;
+            height:auto;
+        }
+    @media (max-width:1300px ){
+        .large{
+            display: none;
+        }
+        .small{
+            display: block;
+        }
+        .content-overlay{
+            top: 0;
+            height: 100%;
+        }
+        .hero-content {
+            align-items:center;
+        }
+        .sign-in-button{
+            width:200px;
+            margin: 0 auto;
+            z-index: 5;
+        }
+        .hero-content-card{
+            top:200px;
+        }
+
+    }
+    @media (min-width:1300px ){
+        .large{
+            display: block;
+        }       
+        .small{
+            display: none;
+        }
+        .visa-logo {
+            width: 100px;
+        }
+    }
+
+    @media (max-width:800px ){
+        .usp {
+            flex-direction:column;
+            gap:25px;
+        }
+        .usp img {
+            width: 100%;
+            height: auto;
+            max-width:200px;
+        }
+        .usp-description{
+            text-align: center;
+            width:100%;
+        }
+        .tagline, .benefits {
+            font-size: 1.4em;
+            text-align:center;
+        }
+        .usp-description h3{
+            font-size: 2em;
+        }
+        .usp-description p{
+            font-size: 16px;
+        }
+        .cta-banner-content h2{
+            font-size: 21px;
+        }
+        .more-usp{
+            gap:10px;
+            padding:5px;
+            align-items: start;
+        }
+        .more-usp-container{
+            width:160px;
+            padding:0px;
+            gap:10px;
+        }
+        .more-usp-container img{
+            width: 100%;
+            height: auto;
+            max-width:160px;
+        }
+        .more-usp-container h3 {
+            font-size: 20px;
+        }
+        .more-usp-container p {
+            font-size: 16px;
+        }
+        .footer-menu {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <section class="hero-banner">
+        <a href="https://app.edgeboost.bet/account/login" class="large sign-in-button">Sign in</a>
+        <div class="content-overlay"></div>
+        <div class="hero-content-card">
+            <div class="hero-content ">
+                <a href="https://app.edgeboost.bet/account/login" class="small sign-in-button-small">Sign in</a>
+
+                <img alt="EDGE BOOST" class="brand-logo" src="assets/imgs/edge-boost-logo.png">
+                <h2 class="tagline">The Financial Platform for Smart Bettors</h2>
+                <h2 class="benefits">Cash Back Rewards & No Usage Costs</h2>
+                <img class="small card" alt="Edge Boost Card" class="edge-boost-card" src="assets/imgs/edge-boost-card.png">
+
+                <img alt="Visa Logo" class="visa-logo" src="assets/imgs/visa-logo.svg">
+                <a href="https://app.edgeboost.bet/account/register?affid=&oid=" class="cta-button">Sign up today</a>
+            </div>
+            <img class="large " alt="Edge Boost Card" class="edge-boost-card" src="assets/imgs/edge-boost-card.png">
+        </div>
+    </section>
+    <section class="usp">
+        <img class="" src="assets/imgs/earn.png" alt="">
+        <div class="usp-description ">
+            <h3>Earn</h3>
+            <p>Earn up to 0.50% on qualified usage at sports books and daily fantasy sites.<sup><a href="#1">1</a></sup></p>
+            <p>Earn $750 Cash Back each month by transferring your $5,000 bankroll daily.<sup><a href="#3">3</a></sup></p>
+        </div>
+    </section>
+    <section class="usp reverse">
+        <img class="" src="assets/imgs/segment-spend.png" alt="">
+        <div class="usp-description ">
+            <h3>Segment Spend</h3>
+            <p>Exercise discretion by separating betting transactions from your primary checking account. Gambling related transactions may impact credit underwriting for important loans such as mortgages.</p>
+        </div>
+    </section>
+    <section class="usp">
+        <img class="" src="assets/imgs/security.png" alt="">
+        <div class="usp-description ">
+            <h3>Security</h3>
+            <p>EDGE accounts are FDIC insured up to $250,000. Deposit Checking accounts are held with Cross River Bank, Member FDIC insured up to $250,000.<sup><a href="#2">2</a></sup></p>
+        </div>
+    </section>
+    <section class="cta-banner">
+        <img class="left-lines" src="assets/imgs/lines.png" alt="">
+        <img class="right-lines" src="assets/imgs/lines.png" alt="">
+        <div class="cta-banner-content">
+            <img src="assets/imgs/cta-logo.png" alt="">
+            <h2>Boost Your Bet Today</h2>
+            <a href="https://app.edgeboost.bet/account/register?affid=&oid=" class="cta-button2">Join Now</a>
+        </div>
+    </section>
+    <section class="more-usp">
+        <div class="more-usp-container ">
+            <img src="assets/imgs/no-cost.png">
+            <h3>No Cost</h3>
+            <p>There are no minimum balances or costs to maintain an account. EDGE only generates revenue when you use the card and we pass through a portion of revenue as Cash Back on qualified usage.</p>
+        </div>
+        <div class="more-usp-container ">
+            <img src="assets/imgs/compatibility.png">
+            <h3>Compatibility</h3>
+            <p>The EDGE Boost VISA debit card can be used at licensed sportsbooks, horse racing platforms, iGaming (iCasino) websites, daily fantasy sports sites, and sweepstakes websites. It is also accepted at authorized brick-and-mortar casinos.<sup><a href="#3">3</a></sup></p>
+        </div>
+        <div class="more-usp-container ">
+            <img src="assets/imgs/access.png">
+            <h3>Access</h3>
+            <p>By centralizing your bankroll in one location, you can deploy it instantly to where you need it vs. holding balances across many accounts.</p>
+        </div>
+        <div class="more-usp-container ">
+            <img src="assets/imgs/liquidity.png">
+            <h3>Liquidity</h3>
+            <p>The EDGE Boost VISA debit card starts with a $100,000 daily limit for high throughput cash access.  Unlimited withdraws can be pushed to the card from betting accounts.<sup><a href="#4">4</a></sup></p>
+        </div>
+    </section>
+    <section class="footer-cta">
+        <div class="cta-banner-content">
+            <img class="footer-logo" src="assets/imgs/edge-boost-logo.png" alt="">
+            <h2>Boost Your Bet Today</h2>
+            <a href="https://app.edgeboost.bet/account/register?affid=&oid=" class="cta-button2">Join Now</a>
+        </div>
+    </section>
+    <footer>
+            <div class="footer-menu">
+                <a href="mailto:launch@edgemarkets.io" class="center">Contact</a>
+                <a href="https://app.edgeboost.bet/legal/documents?type=terms-and-conditions" class="center">Terms
+                    and Conditions</a>
+                <a href="https://app.edgeboost.bet/legal/documents?type=website-privacy-policy" class="center">Privacy
+                    Policy</a>
+                <a href="/legal/em-responsible-gaming-self-restriction-policy.pdf" class="center">
+                    Responsible Gaming and Self Exclusion Policy </a>
+            </div>
+                <p>
+                    Bet with your head, not above it. 21+.
+                    <br>
+                    Call 1-800-GAMBLER for help.
+                </p>
+                <p class="center">EDGE Markets © 2024</p>
+                <p class="center">Boost Deposit accounts held at Cross River Bank, Member FDIC, insured up
+                    to $250,000.</p>
+                <ol>
+                    <li id="1">Deposit Checking accounts are held with Cross River Bank, Member FDIC . The Edge
+                        Boost Visa Debit Card is a Visa® debit card issued by Cross River Bank, Member FDIC,
+                        pursuant to a license from Visa U.S.A. Inc. The Edge Boost Visa Debit Card is not available
+                        to all residents of U.S. territories. For further information, please see our <a href="https://app.edgeboost.bet/legal/documents?type=terms-and-conditions">Terms of
+                            Service and Cardholder Agreement</a>.</li>
+                    <li id="2">Earn up to 0.5% cash back based on your monthly spend tier. Once you meet the tier
+                        threshold,
+                        the corresponding cash back rate applies to all eligible purchases in Qualifying Spend
+                        Categories:
+                        T1: 0.25% cash back for $0-$2,400, T2: 0.30% cash back for $2,500-$24,999, T3: 0.35% cash back
+                        for
+                        $25,000 - $49,999, T4: 0.40% cash back for $50,000 - $99,999, T5: 0.50% cash back for $100,000+.
+                        <a href="https://app.edgeboost.bet/legal/documents?type=terms-and-conditions" target="_blank">Terms and Conditions apply.</a>.
+                        <br>
+                        <br>
+                        Edge Markets will assess your account monthly based on transactions posted by the last day
+                        of each calendar statement cycle. Only transactions classified under Qualifying Spend
+                        Categories are eligible for the Rewards Program and settled within the said period are eligible
+                        for Rewards.
+                        Applicable Rewards will be credited to your account in the following month/statement cycle.
+                        Please
+                        refer to our Additional Terms Regarding Your Edge Card Benefits in our <a href="https://app.edgeboost.bet/legal/documents?type=terms-and-conditions">Terms of
+                            Service and Cardholder Agreement</a> for more information.
+                    </li>
+                    <li id="3">The $750 monthly cashback calculation is based on $5,000 transferred everyday for 30
+                        days,
+                        amounting to $150,000 with the promotional 0.50% cashback rate. <a href="https://app.edgeboost.bet/legal/documents?type=terms-and-conditions" target="_blank">Terms and Conditions apply.</a></li>
+                </ol>
+    </footer>
+</body>
+
+
+</html>
