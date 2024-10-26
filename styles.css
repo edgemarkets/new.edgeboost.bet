@@ -1,0 +1,403 @@
+@font-face {
+    font-family: "CodeNext-SemiBold";
+    src: url(assets/CodeNext-SemiBold.woff) format("woff");
+}
+@font-face {
+    font-family: "CodeNext-Bold";
+    src: url(assets/CodeNext-Bold.woff) format("woff");
+}
+
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #234B93;
+        }
+
+        .hero-banner {
+            background-image:url( "assets/imgs/edge-boost-hero.jpg"); 
+            background-size: cover;
+            width: 100%;
+            height: 852px;
+            margin:0;
+            padding:0;
+            position: relative;
+        }
+        .sign-in-button {
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #234B93;
+            background: rgba(255, 255, 255, 0.80);
+            color: #234B93;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+            position: absolute;
+            right: 37px;
+            top: 36px;
+        }
+        .sign-in-button-small{
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #234B93;
+            background: rgba(255, 255, 255, 0.80);
+            color: #234B93;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-decoration: none;
+        }
+        .cta-button {
+            display: flex;
+            padding: 15px 52px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            border-radius: 12px;
+            border: 2px solid #AC8F41;
+            background: #F3CD2F;
+            color: #234B93;
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            width:200px;
+        }
+        .hero-content-card {
+            height: 425px;
+            position: relative;
+            top:250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            z-index: 4;
+        }
+        .hero-content{
+            
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+        }
+        .content-overlay {
+            background-color: rgba(255, 255, 255, 0.87);
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 225px;
+            height: 500px;
+        }
+        .brand-logo {
+            width: 100%;
+    height: auto;
+    max-width: 600px; /* Optional: Set a max-width to prevent it from becoming too large */
+        }
+        .visa-logo{
+            max-width:150px;
+            width:100%;
+            height:auto;
+        }
+        .edge-boost-card {
+            border-radius: 16px;
+            box-shadow: 8px 8px 10px 0px #F8C761;
+        }
+        .tagline {
+            color: #355268;
+            font-family: "CodeNext-Bold", sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .benefits {
+            color: #234B93;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .usp{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .reverse{
+            flex-direction: row-reverse;
+        }
+        .usp-description{
+            width:600px;
+            line-height: 1.5;
+        }
+        .usp-description h3{
+            color: #234B93;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+            padding-bottom:20px;
+            padding-bottom:.5em;
+        }
+        .usp-description p{
+            color: #355268;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 24px;
+            padding-bottom:1em;
+        }
+        sup a{
+            font-size:16px;
+            color: #234B93;
+        }
+        sup { 
+            vertical-align: top; font-size: 0.6em; 
+        }
+        .cta-banner{
+            background: linear-gradient(90deg, #001C5B 0%, #5FA3D8 100%);
+            width: 100%;
+            height: 350px;
+            margin-top:100px;
+            padding:0;
+            overflow: hidden;
+            position: relative;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+        }
+        
+        .left-lines{
+            position: absolute;
+            top:-160px;
+            z-index: 0;
+            left:0px
+        }
+        .right-lines{
+            position: absolute;
+            top:-160px;
+            right:0px;
+            z-index: 0;
+            transform: rotate(180deg)
+        }
+        .cta-banner-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+        .cta-banner-content img{
+            width:100%;
+            max-width:600px;
+            height: auto;
+        }
+                
+        .cta-button2{
+            display: inline-flex;
+            padding: 12px 42px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            border: 2px solid #F8D136;
+            background: rgba(249, 203, 109, 0.00);
+            color: #F8D136;
+            text-align: center;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .cta-banner-content h2{
+            color: #FFF;
+            text-align: center;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .more-usp-container{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+            width:535px;
+        }
+        .more-usp{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #F4F4F4;
+            padding-bottom:50px;
+        }
+        .more-usp-container h3 {
+            color: #234B93;
+            text-align: center;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+        }
+        .more-usp-container p{
+            color: #355268;
+            text-align: center;
+            font-family: "CodeNext-SemiBold", sans-serif;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        .footer-cta{
+            background-image: url("assets/imgs/edge-boost-footer.png");
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-logo{
+            width: 600px;
+        }
+        footer {
+            background-color:#000;
+            color:rgb(200, 200, 200);
+            font-family: "CodeNext-SemiBold", sans-serif;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            padding: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        footer a {
+            color:rgb(200, 200, 200);
+            text-decoration: none;
+        }
+        .footer-menu{
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .card{
+            width:100%;
+            height:auto;
+        }
+    @media (max-width:1300px ){
+        .large{
+            display: none;
+        }
+        .small{
+            display: block;
+        }
+        .content-overlay{
+            top: 0;
+            height: 100%;
+        }
+        .hero-content {
+            align-items:center;
+        }
+        .sign-in-button{
+            width:200px;
+            margin: 0 auto;
+            z-index: 5;
+        }
+        .hero-content-card{
+            top:200px;
+        }
+
+    }
+    @media (min-width:1300px ){
+        .large{
+            display: block;
+        }       
+        .small{
+            display: none;
+        }
+        .visa-logo {
+            width: 100px;
+        }
+    }
+
+    @media (max-width:800px ){
+        .usp {
+            flex-direction:column;
+            gap:25px;
+        }
+        .usp img {
+            width: 100%;
+            height: auto;
+            max-width:200px;
+        }
+        .usp-description{
+            text-align: center;
+            width:100%;
+        }
+        .tagline, .benefits {
+            font-size: 1.4em;
+            text-align:center;
+        }
+        .usp-description h3{
+            font-size: 2em;
+        }
+        .usp-description p{
+            font-size: 16px;
+        }
+        .cta-banner-content h2{
+            font-size: 21px;
+        }
+        .more-usp{
+            gap:10px;
+            padding:5px;
+            align-items: start;
+        }
+        .more-usp-container{
+            width:160px;
+            padding:0px;
+            gap:10px;
+        }
+        .more-usp-container img{
+            width: 100%;
+            height: auto;
+            max-width:160px;
+        }
+        .more-usp-container h3 {
+            font-size: 20px;
+        }
+        .more-usp-container p {
+            font-size: 16px;
+        }
+        .footer-menu {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
