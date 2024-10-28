@@ -132,10 +132,17 @@
             font-weight: 600;
         }
         .benefits {
-            color: #234B93;
+            color: #F3CD2F;
             font-family: "CodeNext-SemiBold", sans-serif;
             font-size: 32px;
             font-weight: 700;
+            background-color: #001248;
+            padding: 10px 10px;
+            display: inline;
+            text-align: center;
+        }
+        .benefits span {
+            color: #00B8FF;
         }
         .usp{
             display: flex;
