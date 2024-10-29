@@ -293,6 +293,10 @@ ALL ANIMATIONS
     justify-content: center;
 }
 
+.usp-video {
+    height: 100vh;
+}
+
 .reverse {
     flex-direction: row-reverse;
 }
@@ -435,6 +439,13 @@ sup {
     line-height: 1.5;
 }
 
+.tutorial {
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    flex: 1;
+}
+
 .footer-cta {
     background-image: url("assets/imgs/edge-boost-footer.png");
     background-size: cover;
@@ -537,6 +548,10 @@ footer a {
     .usp {
         flex-direction: column;
         gap: 25px;
+    }
+
+    .usp-video {
+        height: 50vh;
     }
 
     .usp img {
