@@ -261,7 +261,8 @@
             // Get affiliate tracking parameters
             const affid = window.EF.urlParameter('affid');
             const oid = window.EF.urlParameter('oid');
-
+            console.log('Affid: ' + affid);
+            console.log('Oid: ' + oid);
             // If both tracking parameters are present
             if (affid && oid) {
                 // Track the click event
