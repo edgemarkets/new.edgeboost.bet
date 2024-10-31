@@ -248,6 +248,35 @@
         </ol>
     </footer>
     <script src="./app.js?v=1" async defer></script>
+
+    <script type="text/javascript" src="https://www.vcx5res.com/scripts/sdk/everflow.js"></script>
+    <script>
+        $(document).ready(function () {
+            EF.configure({
+                tld: "edgeboost.io" // Top level TLD without http(s)
+            });
+            window.EF = EF;
+
+
+            //console.log(window.EF); 
+            if (window.EF.urlParameter('affid') && window.EF.urlParameter('oid')) {
+                window.EF.configure({
+                    tld: "edgeboost.io"
+                });
+
+                window.EF.click({
+                    offer_id: window.EF.urlParameter('oid'),
+                    affiliate_id: window.EF.urlParameter('affid')
+                })
+                var signup_link = $('.signup-link').attr('href');
+                $('.signup-link').attr('href', signup_link + '?oid=' + window.EF.urlParameter('oid') + '&affid=' + window.EF.urlParameter('affid'));
+
+                var signin_link = $('.signin-link').attr('href');
+                $('.signin-link').attr('href', signin_link + '?oid=' + window.EF.urlParameter('oid') + '&affid=' + window.EF.urlParameter('affid'));
+            }
+        });
+    </script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/14558247.js"></script>
 </body>
 
 
