@@ -53,8 +53,7 @@
     <section class="usp usp-video">
         <iframe src="https://player.vimeo.com/video/1010664581?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            title="Maximize Cash Back Rewards Guide"
-            class="tutorial"></iframe>
+            title="Maximize Cash Back Rewards Guide" class="tutorial"></iframe>
     </section>
     <section class="usp reverse">
         <img class="" src="../assets/imgs/segment-spend.png" alt="">
@@ -174,6 +173,65 @@
         </ol>
     </footer>
     <script src="../app.js?v=1" async defer></script>
+
+    <script type="text/javascript" src="https://www.vcx5res.com/scripts/sdk/everflow.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Configure Everflow tracking
+            EF.configure({
+                tld: "edgeboost.bet"
+            });
+            window.EF = EF;
+
+            // Get affiliate tracking parameters
+            const affid = window.EF.urlParameter('affid');
+            const oid = window.EF.urlParameter('oid');
+
+
+            // If both tracking parameters are present
+            if (affid && oid) {
+                // Track the click event
+                window.EF.click({
+                    offer_id: oid,
+                    affiliate_id: affid
+                });
+
+                // Build the tracking query string
+                const trackingParams = `?oid=${oid}&affid=${affid}`;
+
+                // List of all signup/signin link selectors
+                const linkSelectors = [
+                    '.cta-button',          // Hero CTA
+                    '.cta-button2',         // Footer CTA
+                    '.signup-link',         // Top navigation signup
+                    '.top-sign-up',         // Floating signup button
+                    'a[href*="/account/register"]', // Any registration links
+                    '.sign-in-button',      // Main signin button
+                    '.sign-in-button-small',// Small signin button
+                    'a[href*="/account/login"]'    // Any login links
+                ];
+
+                // Modify all relevant links
+                linkSelectors.forEach(selector => {
+                    $(selector).each(function () {
+                        const $link = $(this);
+                        const baseUrl = $link.attr('href').split('?')[0]; // Remove any existing query params
+                        $link.attr('href', baseUrl + trackingParams);
+                    });
+                });
+
+                // Log for debugging
+                console.log('Everflow Affiliate tracking parameters added:', {
+                    affid: affid,
+                    oid: oid,
+                    trackingParams: trackingParams
+                });
+            } else {
+                console.log('No affiliate tracking parameters found in URL');
+            }
+        });
+    </script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/14558247.js"></script>
 </body>
 
 
