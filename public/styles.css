@@ -492,6 +492,13 @@ footer a {
     height: auto;
 }
 
+.usp img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
+
+
 @media (max-width:1300px) {
     .large {
         display: none;
