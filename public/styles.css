@@ -575,16 +575,13 @@ footer a {
         font-size: 32px;
     }
     .testimonials {
-        padding: 15% 5%;
         color: white;
         background-color: #234B93;
         background-image: url('assets/imgs/lines.png');
-        /* background-image: linear-gradient(#234B93, white); */
         background-repeat: no-repeat;
     }
 
     .testimonial-carousel {
-        padding: 5% 15%;
         overflow-x: auto;
         display: flex;
         gap: 3rem;
