@@ -177,7 +177,7 @@ ALL ANIMATIONS
 
 .sign-in-button-small {
     display: inline-block;
-    padding: 12px 32px;
+    padding: 12px 22px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -186,7 +186,7 @@ ALL ANIMATIONS
     background: rgba(255, 255, 255, 0.80);
     color: #234B93;
     font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -231,6 +231,71 @@ ALL ANIMATIONS
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.quote-icon {
+    border-radius: 100%;
+    text-align: center;
+    color: #001C5B;
+}
+
+.quote-icon i {
+    font-size: 24px
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-header {
+    text-align: center;
+    background-color: #234B93;
+    font-size: 48px;
+}
+
+.testimonials {
+    padding: 2%;
+    color: white;
+    background-color: #234B93;
+    background-image: url('assets/imgs/lines.png');
+    /* background-image: linear-gradient(#234B93, white); */
+    background-repeat: no-repeat;
+}
+
+.testimonial-carousel {
+    padding: 5%;
+    overflow-x: auto;
+    display: flex;
+    gap: 3rem;
+    user-select: none;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.testimonial-carousel:active {
+    cursor: grabbing;
+}
+
+.testimonial-card {
+    position: relative;
+    height: 25rem;
+    min-width: 14rem;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    font-size: 14px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.arrow {
+    display: none;
 }
 
 .content-overlay {
@@ -446,6 +511,10 @@ sup {
     flex: 1;
 }
 
+.social-link {
+    text-decoration: none;
+}
+
 .footer-cta {
     background-image: url("assets/imgs/edge-boost-footer.png");
     background-size: cover;
@@ -500,6 +569,46 @@ footer a {
 
 
 @media (max-width:1300px) {
+    .testimonial-header {
+        text-align: center;
+        background-color: #234B93;
+        font-size: 32px;
+    }
+    .testimonials {
+        padding: 15% 5%;
+        color: white;
+        background-color: #234B93;
+        background-image: url('assets/imgs/lines.png');
+        /* background-image: linear-gradient(#234B93, white); */
+        background-repeat: no-repeat;
+    }
+
+    .testimonial-carousel {
+        padding: 5% 15%;
+        overflow-x: auto;
+        display: flex;
+        gap: 3rem;
+    }
+
+    .arrow {
+        display: block;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .testimonial-card {
+        position: relative;
+        height: 25rem;
+        min-width: 14rem;
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        font-size: 14px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        overflow: auto;
+    }
+
     .large {
         display: none;
     }
@@ -521,10 +630,6 @@ footer a {
         width: 200px;
         margin: 0 auto;
         z-index: 5;
-    }
-
-    .hero-content-card {
-        top: 150px;
     }
 
     .card {
