@@ -28,7 +28,7 @@ function check_if_in_view() {
         window_top_position
     ) {
         $(".sign-in-button").css({ display: "none" });
-        
+
     } else {
         $(".sign-in-button").fadeIn()
     }
