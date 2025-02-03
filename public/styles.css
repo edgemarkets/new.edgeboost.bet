@@ -515,6 +515,55 @@ sup {
     text-decoration: none;
 }
 
+/* Section wrapper */
+.partners {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    /* Example background color */
+}
+
+/* Section heading (adjust as needed) */
+.partners h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    /* Add styles here, like color, font-weight, etc. */
+}
+
+/* Container for the logos */
+.partner-logos {
+    /* Using CSS Grid with auto-fit so the logos 
+       automatically wrap based on screen size */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* centers the grid container */
+    align-items: center;
+    /* vertically centers logos in each cell */
+}
+
+/* Single logo container */
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo images */
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.partner-logo:hover img {
+    transform: scale(1.05);
+}
+
+
 .footer-cta {
     background-image: url("assets/imgs/edge-boost-footer.png");
     background-size: cover;
@@ -574,6 +623,7 @@ footer a {
         background-color: #234B93;
         font-size: 24px;
     }
+
     .testimonials {
         padding: 15% 5%;
         color: white;
@@ -656,6 +706,15 @@ footer a {
 }
 
 @media (max-width:800px) {
+
+    .partners h2 {
+        font-size: 1.5rem;
+    }
+
+    .partner-logos {
+        gap: 15px;
+    }
+
     .usp {
         flex-direction: column;
         gap: 25px;
