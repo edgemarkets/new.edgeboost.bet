@@ -254,6 +254,13 @@ ALL ANIMATIONS
     font-size: 48px;
 }
 
+.lexy-header {
+    text-align: center;
+    color: #234B93;
+    font-size: 48px;
+    margin: 1em 0 0 0;
+}
+
 .testimonials {
     padding: 2%;
     color: white;
@@ -628,6 +635,12 @@ footer a {
         font-size: 24px;
     }
 
+    .lexy-header {
+        text-align: center;
+        color: #234B93;
+        font-size: 24px;
+    }
+
     .testimonials {
         padding: 15% 5%;
         color: white;
@@ -722,6 +735,10 @@ footer a {
     .usp {
         flex-direction: column;
         gap: 25px;
+    }
+
+    .usp.lexy-video {
+        padding: 1rem 0 0 0;
     }
 
     .usp-video {
