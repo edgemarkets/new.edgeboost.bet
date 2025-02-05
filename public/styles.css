@@ -362,6 +362,10 @@ ALL ANIMATIONS
     height: 75vh;
 }
 
+.lexy-video {
+    height: 75vh;
+}
+
 .reverse {
     flex-direction: row-reverse;
 }
@@ -722,6 +726,10 @@ footer a {
 
     .usp-video {
         height: 50vh;
+    }
+
+    .lexy-video {
+        height: 25vh;
     }
 
     .usp img {
