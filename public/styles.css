@@ -145,6 +145,72 @@ ALL ANIMATIONS
 
 /* END ANIMATIONS  */
 
+/* START CAROUSEL */
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 3rem;
+}
+
+.carousel-slide .ambassador-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* END CAROUSEL */
+
+.ambassador-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.ambassador-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .hero-banner {
     background-image: url("assets/imgs/edge-boost-hero.jpg");
     background-size: cover;
@@ -266,7 +332,7 @@ ALL ANIMATIONS
     color: white;
     background-color: #234B93;
     /* background-image: url('assets/imgs/lines.png'); */
-    background-image: linear-gradient( white, #234B93);
+    background-image: linear-gradient(white, #234B93);
     background-repeat: no-repeat;
 }
 
@@ -376,23 +442,6 @@ ALL ANIMATIONS
 
 .usp-video {
     height: 75vh;
-}
-
-.ambassador-video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    margin: 1rem;
-}
-
-.ambassador-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
 }
 
 .reverse {
@@ -735,6 +784,7 @@ footer a {
         color: #234B93;
         font-size: 24px;
     }
+
     .partners h2 {
         font-size: 1.5rem;
     }
