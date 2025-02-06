@@ -651,27 +651,6 @@ footer a {
 
 
 @media (max-width:1300px) {
-    .testimonial-header {
-        text-align: center;
-        background-color: #234B93;
-        font-size: 24px;
-    }
-
-    .ambassador-header {
-        text-align: center;
-        color: #234B93;
-        font-size: 24px;
-    }
-
-    .testimonials {
-        padding: 15% 5%;
-        color: white;
-        background-color: #234B93;
-        background-image: url('assets/imgs/lines.png');
-        /* background-image: linear-gradient(#234B93, white); */
-        background-repeat: no-repeat;
-    }
-
     .testimonial-carousel {
         overflow-x: auto;
         display: flex;
@@ -745,7 +724,17 @@ footer a {
 }
 
 @media (max-width:800px) {
+    .testimonial-header {
+        text-align: center;
+        background-color: #234B93;
+        font-size: 24px;
+    }
 
+    .ambassador-header {
+        text-align: center;
+        color: #234B93;
+        font-size: 24px;
+    }
     .partners h2 {
         font-size: 1.5rem;
     }
