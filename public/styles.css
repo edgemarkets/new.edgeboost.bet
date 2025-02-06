@@ -254,7 +254,7 @@ ALL ANIMATIONS
     font-size: 48px;
 }
 
-.lexy-header {
+.ambassador-header {
     text-align: center;
     color: #234B93;
     font-size: 48px;
@@ -378,7 +378,7 @@ ALL ANIMATIONS
     height: 75vh;
 }
 
-.lexy-video {
+.ambassador-video {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
@@ -386,7 +386,7 @@ ALL ANIMATIONS
     margin: 1rem;
 }
 
-.lexy-video iframe {
+.ambassador-video iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -657,7 +657,7 @@ footer a {
         font-size: 24px;
     }
 
-    .lexy-header {
+    .ambassador-header {
         text-align: center;
         color: #234B93;
         font-size: 24px;
