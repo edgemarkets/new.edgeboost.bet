@@ -162,7 +162,7 @@ ALL ANIMATIONS
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
-    padding: 0 3rem;
+    padding: 2rem 3rem;
 }
 
 .carousel-slide .ambassador-video {
