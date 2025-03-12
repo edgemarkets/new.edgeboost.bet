@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Financial Platform for Smart Bettors</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css?v=02062025-3" />
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <script
@@ -170,38 +176,240 @@
     />
   </head>
   <body>
-    <nav>
-      <div class="edge-topnav">
-        <div class="menu-items">
-          <div>
-            <img
-              class="topnav-logo"
-              src="assets/imgs/edge-boost-logo.png"
-              alt="EDGE Boost Logo"
-            />
-          </div>
-          <hr />
-          <div class="nav-item">
-            <a href="#">Menu 1</a>
-          </div>
-          <div class="nav-item">
-            <a href="#">Menu 2</a>
-          </div>
-          <div class="nav-item">
-            <a href="#">Menu 3</a>
-          </div>
-          <div class="nav-item">
-            <a href="#">Menu 4</a>
-          </div>
-        </div>
-        <div>
-          <a class="action-btn">Get Started</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- Brand with Edge Boost logo -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/imgs/edge-boost-logo.png" alt="EDGE Boost Logo" class="d-inline-block align-top topnav-logo">
+        </a>
+        <a class="action-btn ms-lg-3 d-lg-none ms-auto" href="#">Get Started</a>
+
+        <!-- Toggler for mobile view -->
+        <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" 
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content, aligned to the right -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+          <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu 4</a>
+            </li>
+          </ul>
+          <!-- Get Started Button -->
+          <a class="action-btn ms-lg-3" href="#">Get Started</a>
         </div>
       </div>
-    </nav>
+    </nav>    
     <header>
-      <section class="header"></section>
-      <section class="blue-numbers"></section>
+      <section class="header">
+        <div class="header-text-container">
+          <h1 class="header-title">
+            The Financial<br />
+            Platform for<br />
+            <span class="highlight">Smart</span> Bettors
+          </h1>
+          <div class="flex align-items-center">
+            <p style="padding-right: 1rem">
+              The Official Debit Card of the<br />
+              World Series of Poker
+            </p>
+            <img
+              alt="World Series of Poker Logo"
+              class="logo-sm"
+              src="assets/imgs/WSOP_3Chips_4c.png"
+            />
+          </div>
+          <a href="#" class="action-btn">Sign Up Today</a>
+        </div>
+        <div class="header-img-container">
+          <img
+            src="assets/imgs/new-edge-card.png"
+            alt="EDGE Boost Debit Card"
+            class="edge-card"
+          />
+          <img
+            src="assets/imgs/cool-gambler.png"
+            alt="Cool Gambler"
+            class="gambler"
+          />
+        </div>
+      </section>
+      <section class="blue-banner row row-cols-1 row-cols-sm-2">
+        <div class="banner-item col">
+          <span class="highlight">100%</span>
+          <h3>Approval On All Gambling Deposits</h3>
+        </div>
+        <div class="banner-item col">
+          <span class="highlight">$250,000</span>
+          <h3>Daily Deposit Limit, Unlimited Withdrawals</h3>
+        </div>
+      </section>
+      <section class="ambassadors">
+        <h1 class="ambassador-title">
+          Hear It From Our <span class="highlight">Ambassadors</span>
+        </h1>
+        <div id="ambassadorCarouselDesktop" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#ambassadorCarouselDesktop"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <!-- <button type="button" data-bs-target="#ambassadorCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#ambassadorCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="ambassador-video">
+                    <iframe
+                      src="https://player.vimeo.com/video/1054200674?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                      frameborder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                      title="EDGE Boost Ambassador - Jamie Gold"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="ambassador-video">
+                    <iframe
+                      src="https://player.vimeo.com/video/1053552254?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                      frameborder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                      title="Lexy Gavin - Brand Ambassador"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="ambassador-video">
+                    <iframe
+                      src="https://www.youtube.com/embed/72qq8r_l2xs?si=PCPk2OrqNe8NQZId"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#ambassadorCarouselDesktop"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#ambassadorCarouselDesktop"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div id="ambassadorCarouselMobile" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#ambassadorCarouselMobile"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#ambassadorCarouselMobile"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#ambassadorCarouselMobile"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="ambassador-video">
+                <iframe
+                  src="https://player.vimeo.com/video/1054200674?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="EDGE Boost Ambassador - Jamie Gold"
+                ></iframe>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="ambassador-video">
+                <iframe
+                  src="https://player.vimeo.com/video/1053552254?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="Lexy Gavin - Brand Ambassador"
+                ></iframe>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="ambassador-video">
+                <iframe
+                  src="https://www.youtube.com/embed/72qq8r_l2xs?si=PCPk2OrqNe8NQZId"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#ambassadorCarouselMobile"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#ambassadorCarouselMobile"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
