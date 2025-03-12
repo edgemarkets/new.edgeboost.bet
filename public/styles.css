@@ -779,6 +779,10 @@ footer a {
         font-size: 24px;
     }
 
+    .poker-text {
+        text-align: center;
+    }
+
     .ambassador-header {
         text-align: center;
         color: #234B93;
