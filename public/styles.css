@@ -51,7 +51,7 @@ h1 {
 }
 
 .header-text-container {
-  width: 600px;
+  width: 650px;
 }
 
 .header-img-container img {
@@ -62,6 +62,11 @@ h1 {
 .edge-card {
   height: 100%;
   right: 30%;
+}
+
+.playing-cards {
+  height: 100%;
+  right: 0;
 }
 
 .gambler {
@@ -199,6 +204,7 @@ h1 {
 .action-btn {
   box-shadow: 0 2px 4px rgb(12, 80, 110);
   padding: 9px;
+  display: inline-block;
   background-color: var(--flat-gold);
   border: 1px solid #0c506e;
   color: #0c506e;
@@ -403,13 +409,28 @@ footer a {
   text-decoration: none;
 }
 
+@media (max-width: 992px) {
+  .ambassadors,
+  .testimonials,
+  .perks {
+    padding: 1rem;
+  }
+
+  .earning,
+  .join,
+  .spending,
+  .responsible-gaming {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
 @media (max-width: 800px) {
   h1 {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 1.2;
   }
   .highlight {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   header {
@@ -417,7 +438,7 @@ footer a {
   }
   .header {
     flex-direction: column;
-    padding: 1rem 0 0 0;
+    padding: 0 1rem;
   }
   .header-text-container {
     width: 100%;
@@ -431,7 +452,8 @@ footer a {
     overflow: hidden;
   }
   .edge-card,
-  .gambler {
+  .gambler,
+  .playing-cards {
     position: relative;
     width: 100%;
     height: auto;
@@ -462,18 +484,6 @@ footer a {
   #ambassadorCarouselMobile,
   #testimonialCarouselMobile {
     display: block;
-  }
-  .ambassadors,
-  .testimonials,
-  .perks {
-    padding: 1rem;
-  }
-
-  .earning,
-  .join,
-  .spending,
-  .responsible-gaming {
-    padding: 1rem 1rem 0 1rem;
   }
 
   .header-text-container,
