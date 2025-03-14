@@ -573,3 +573,19 @@ footer a {
     text-align: center;
   }
 }
+
+@media (max-width: 320px) {
+  .top-action-btn {
+    margin-right: auto
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: .25rem .25rem
+  }
+
+  .navbar-toggler.ms-3 {
+    margin-left: 0 !important;
+  }
+  
+}
