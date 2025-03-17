@@ -484,6 +484,13 @@ footer a {
     line-height: 1.2;
   }
 
+  .promo-text {
+    position: static;
+    margin-top: 2rem;
+    text-wrap: none;
+    z-index: 999;
+  }
+
   .title {
     margin: 3rem 0;
   }
