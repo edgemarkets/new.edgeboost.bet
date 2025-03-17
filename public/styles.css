@@ -40,6 +40,13 @@ header {
   align-items: center;
 }
 
+.promo-text {
+  position: absolute;
+  margin-top: 2rem;
+  text-wrap: none;
+  z-index: 999;
+}
+
 h1 {
   font-size: 48px;
 }
