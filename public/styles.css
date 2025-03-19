@@ -1,867 +1,605 @@
 @font-face {
-    font-family: "CodeNext-SemiBold";
-    src: url(assets/CodeNext-SemiBold.woff) format("woff");
+  font-family: "CodeNext-SemiBold";
+  src: url(assets/CodeNext-SemiBold.woff) format("woff");
 }
 
 @font-face {
-    font-family: "CodeNext-Bold";
-    src: url(assets/CodeNext-Bold.woff) format("woff");
+  font-family: "CodeNext-Bold";
+  src: url(assets/CodeNext-Bold.woff) format("woff");
+}
+
+:root {
+  --main-blue: #018dc2;
+  --dark-blue: #234b93;
+  --flat-gold: #f1c61c;
+  --dark-gray: #343c47;
+  --main-cream: #f7f5c3;
+  --light-cream: #fcfce4;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "CodeNext-SemiBold", sans-serif;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #234B93;
+header {
+  height: 85vh;
 }
 
-/*
--------
--------
-ALL ANIMATIONS
--------
--------
-*/
-/* START ANIMATION DELAY TIMES  */
-.dly800 {
-    -moz-transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -o-transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -webkit-transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1) !;
+.header {
+  padding: 0 5rem;
+  background-image: url(./assets/imgs/header-img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.dly1000 {
-    -moz-transition: all 1s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -o-transition: all 1s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -webkit-transition: all 1s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    transition: all 1s cubic-bezier(0.42, 0, 0.58, 1) !;
+.promo-text {
+  position: absolute;
+  margin-top: 2rem;
+  text-wrap: none;
+  z-index: 999;
 }
 
-.dly1200 {
-    -moz-transition: all 1.2s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -o-transition: all 1.2s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -webkit-transition: all 1.2s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    transition: all 1.2s cubic-bezier(0.42, 0, 0.58, 1) !important;
+h1 {
+  font-size: 48px;
 }
 
-.dly1500 {
-    -moz-transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -o-transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -webkit-transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    transition: all 1.5s cubic-bezier(0.42, 0, 0.58, 1) !;
+.title {
+  margin-bottom: 3rem;
 }
 
-.dly3000 {
-    -moz-transition: all 3s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -o-transition: all 3s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    -webkit-transition: all 3s cubic-bezier(0.42, 0, 0.58, 1) !important;
-    transition: all 3s cubic-bezier(0.42, 0, 0.58, 1) !;
+.header-img-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-/* END ANIMATION DELAY TIMES */
-/* START ANIMATION STYLES */
-.animation-element {
-    opacity: 0;
-    position: relative;
+.header-text-container {
+  width: 650px;
 }
 
-.animation-element.slide-left {
-    opacity: 0;
-    -moz-transition: all 600ms linear;
-    -webkit-transition: all 600ms linear;
-    -o-transition: all 600ms linear;
-    transition: all 600ms linear;
-    -moz-transform: translate3d(-50px, 0px, 0px);
-    -webkit-transform: translate3d(-50px, 0px, 0px);
-    -o-transform: translate(-50px, 0px);
-    -ms-transform: translate(-50px, 0px);
-    transform: translate3d(-50px, 0px, 0px);
+.header-img-container img {
+  position: absolute;
+  top: 0;
 }
 
-.animation-element.slide-far-left {
-    opacity: 0;
-    -moz-transition: all 600ms linear;
-    -webkit-transition: all 600ms linear;
-    -o-transition: all 600ms linear;
-    transition: all 600ms linear;
-    -moz-transform: translate3d(-150px, 0px, 0px);
-    -webkit-transform: translate3d(-150px, 0px, 0px);
-    -o-transform: translate(-150px, 0px);
-    -ms-transform: translate(-150px, 0px);
-    transform: translate3d(-150px, 0px, 0px);
-    visibility: hidden;
+.edge-card {
+  height: 100%;
+  right: 30%;
 }
 
-.animation-element.slide-far-right {
-    opacity: 0;
-    -moz-transition: all 400ms linear;
-    -webkit-transition: all 400ms linear;
-    -o-transition: all 400ms linear;
-    transition: all 400ms linear;
-    -moz-transform: translate3d(150px, 0px, 0px);
-    -webkit-transform: translate3d(150px, 0px, 0px);
-    -o-transform: translate(150px, 0px);
-    -ms-transform: translate(150px, 0px);
-    transform: translate3d(150px, 0px, 0px);
-    visibility: hidden;
+.playing-cards {
+  height: 100%;
+  right: 0;
 }
 
-.animation-element.slide-up {
-    opacity: 0;
-    -moz-transition: all 600ms linear;
-    -webkit-transition: all 600ms linear;
-    -o-transition: all 600ms linear;
-    transition: all 600ms linear;
-    -moz-transform: translate3d(0px 50px, 0px);
-    -webkit-transform: translate3d(0px 50px, 0px);
-    -o-transform: translate(0px 50px);
-    -ms-transform: translate(0px 50px);
-    transform: translate3d(0px 50px, 0px);
-    visibility: hidden;
+.gambler {
+  right: 0;
+  height: 100%;
 }
 
-/* In view  */
-.animation-element.slide-left.in-view,
-.animation-element.slide-far-right.in-view,
-.animation-element.slide-up.in-view,
-.animation-element.slide-far-left.in-view {
-    opacity: 1;
-    visibility: visible;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
+.edge-topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 1rem 5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-/* END ANIMATIONS  */
-
-/* START CAROUSEL */
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
+.edge-topnav hr {
+  margin: 0 10px;
+  border: 0.5px solid black;
 }
 
-.carousel-track {
-    width: 100%;
-    display: flex;
-    transition: transform 0.5s ease;
+.menu-items {
+  display: flex;
+  align-items: center;
 }
 
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 3rem;
+.nav-item {
+  padding: 5px 10px;
 }
 
-.carousel-slide .ambassador-video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    margin: 0;
+.nav-item > a {
+  text-decoration: none;
+  color: black;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.topnav-logo {
+  height: 25px;
 }
 
-.carousel-button.prev {
-    left: 10px;
+.blue-banner {
+  background-color: #018dc2;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
-.carousel-button.next {
-    right: 10px;
+.blue-banner > hr {
+  border: 1px solid white;
+  margin: 20px 0;
 }
 
-/* END CAROUSEL */
+.banner-item {
+  padding: 1.5rem 0;
+}
+
+.banner-item:nth-child(2) {
+  position: relative;
+}
+
+.banner-item:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 25%;
+  height: 50%;
+  width: 2px;
+  background-color: #fff;
+}
+
+.ambassadors {
+  background-color: var(--dark-gray);
+  padding: 5rem;
+  color: white;
+  text-align: center;
+}
+
+#ambassadorCarouselMobile {
+  display: none;
+}
+
+#testimonialCarouselMobile {
+  display: none;
+}
+
+.carousel-controls-container {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 2;
+  width: 100px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  bottom: -45px;
+  top: auto;
+  max-width: 3rem;
+  max-height: 3rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  border-radius: 50%;
+  z-index: 2;
+  border: 1px solid white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.carousel-control-prev-icon::before {
+  content: "<";
+}
+.carousel-control-next-icon::before {
+  content: ">";
+}
 
 .ambassador-video {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;
-    overflow: hidden;
-    margin: 1rem;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .ambassador-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.hero-banner {
-    background-image: url("assets/imgs/edge-boost-hero.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 852px;
-    margin: 0;
-    padding: 0;
-    position: relative;
+.carousel-indicators .active {
+  background-color: var(--main-blue) !important;
 }
 
-.sign-in-button {
-    display: inline-block;
-    padding: 12px 42px;
-    gap: 10px;
-    border-radius: 10px;
-    border: 2px solid #234B93;
-    background: rgba(255, 255, 255, 0.80);
-    color: #234B93;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration: none;
-    position: fixed;
-    right: 37px;
-    top: 36px;
-    z-index: 1000;
+.carousel-indicators [data-bs-target] {
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  background-color: var(--dark-gray);
+  opacity: 1;
 }
 
-.sign-in-button-small {
-    display: inline-block;
-    padding: 12px 22px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    border: 2px solid #234B93;
-    background: rgba(255, 255, 255, 0.80);
-    color: #234B93;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-decoration: none;
-    z-index: 1000;
-    position: fixed;
-    top: 30px;
-    right: 30px;
+.highlight {
+  position: relative;
+  font-size: 48px;
+  z-index: 1;
 }
 
-.cta-button {
-    display: flex;
-    padding: 15px 52px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 12px;
-    border: 2px solid #AC8F41;
-    background: #F3CD2F;
-    color: #234B93;
-    font-size: 24px;
-    font-weight: 700;
-    text-decoration: none;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    width: 200px;
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: var(--flat-gold);
+  z-index: -1;
 }
 
-.hero-content-card {
-    height: 425px;
-    position: relative;
-    top: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    z-index: 4;
+.action-btn {
+  box-shadow: 0 2px 4px rgb(12, 80, 110);
+  padding: 9px;
+  display: inline-block;
+  background-color: var(--flat-gold);
+  border: 1px solid #0c506e;
+  color: #0c506e;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
-.hero-content {
-
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.action-btn:hover {
+  transform: scale(1.1);
 }
 
-.quote-icon {
-    border-radius: 100%;
-    text-align: center;
-    color: #001C5B;
+.logo-sm {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
 }
 
-.quote-icon i {
-    font-size: 24px
+.earning {
+  padding: 5rem 5rem 0 5rem;
+  background-image: url(./assets/imgs/earning-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
+.earning-text-content {
+  width: 400px;
 }
 
-.testimonial-header {
-    text-align: center;
-    background-color: #234B93;
-    font-size: 48px;
+.responsible-gaming {
+  padding: 5rem 5rem 0 5rem;
+  background-image: url(./assets/imgs/responsible-gaming-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.ambassador-header {
-    text-align: center;
-    color: #234B93;
-    font-size: 48px;
-    margin: 1em 0 0 0;
+.responsible-gaming-text-content {
+  color: white;
+  width: 600px;
 }
 
-.promo-section {
-    padding: 2%;
-    color: white;
-    background-color: #234B93;
-    /* background-image: url('assets/imgs/lines.png'); */
-    background-image: linear-gradient(white, #234B93);
-    background-repeat: no-repeat;
+.spending {
+  padding: 5rem 5rem 0 5rem;
+  background-image: url(./assets/imgs/spending-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.spending-text-content {
+  color: white;
+  width: 500px;
+}
+
+.secure {
+  padding: 2rem;
+  background-image: url(./assets/imgs/earning-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.secure-text {
+  text-align: center;
+  width: 500px;
+}
+
+.perks {
+  padding: 5rem;
+  background-color: var(--dark-gray);
+  color: white;
+  text-align: center;
+}
+
+.perk-card {
+  background-color: white;
+  color: var(--dark-gray);
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 420px;
+}
+
+.perk-card p {
+  font-size: 14px;
+}
+
+.perk-icon {
+  height: 150px;
 }
 
 .testimonials {
-    padding: 2%;
-    color: white;
-    background-color: #234B93;
-    background-image: url('assets/imgs/lines.png');
-    /* background-image: linear-gradient(#234B93, white); */
-    background-repeat: no-repeat;
-}
-
-.testimonial-carousel {
-    padding: 5%;
-    overflow-x: auto;
-    display: flex;
-    gap: 3rem;
-    user-select: none;
-    scroll-behavior: smooth;
-    cursor: grab;
-}
-
-.testimonial-carousel:active {
-    cursor: grabbing;
+  padding: 5rem;
+  background-image: url(./assets/imgs/testimonials-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
 }
 
 .testimonial-card {
-    position: relative;
-    height: 25rem;
-    min-width: 14rem;
-    background-color: white;
-    color: black;
-    padding: 2rem;
-    font-size: 14px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
-    overflow: auto;
+  position: relative;
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  overflow: auto;
+  text-align: left;
+  height: 25rem;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.italic {
-    font-style: italic;
+.testimonial-card::-webkit-scrollbar {
+  display: none;
 }
 
-.arrow {
-    display: none;
-}
-
-.content-overlay {
-    background-color: rgba(255, 255, 255, 0.87);
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 225px;
-    height: 500px;
-}
-
-.brand-logo {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    /* Optional: Set a max-width to prevent it from becoming too large */
-}
-
-.visa-logo {
-    max-width: 150px;
-    width: 100%;
-    height: auto;
-}
-
-.edge-boost-card {
-    border-radius: 16px;
-    box-shadow: 8px 8px 10px 0px #F8C761;
-}
-
-.tagline {
-    color: #355268;
-    font-family: "CodeNext-Bold", sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-}
-
-.benefits {
-    color: #F3CD2F;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    background-color: #001248;
-    padding: 10px 10px;
-    display: inline;
-    text-align: center;
-}
-
-.benefits span {
-    color: #00B8FF;
-}
-
-.usp {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-}
-
-.usp-video {
-    height: 75vh;
-}
-
-.reverse {
-    flex-direction: row-reverse;
-}
-
-.usp-description {
-    width: 600px;
-    line-height: 1.5;
-}
-
-.usp-description h3 {
-    color: #234B93;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 48px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    padding-bottom: .5em;
-}
-
-.usp-description p {
-    color: #355268;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 24px;
-    padding-bottom: 1em;
-}
-
-sup a {
-    font-size: 16px;
-    color: #234B93;
-}
-
-sup {
-    vertical-align: top;
-    font-size: 0.6em;
-}
-
-.cta-banner {
-    background: linear-gradient(90deg, #001C5B 0%, #5FA3D8 100%);
-    width: 100%;
-    height: 350px;
-    margin-top: 100px;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.left-lines {
-    position: absolute;
-    top: -160px;
-    z-index: 0;
-    left: 0px
-}
-
-.right-lines {
-    position: absolute;
-    top: -160px;
-    right: 0px;
-    z-index: 0;
-    transform: rotate(180deg)
-}
-
-.cta-banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    z-index: 1;
-}
-
-.cta-banner-content img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-.cta-button2 {
-    display: inline-flex;
-    padding: 12px 42px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    border: 2px solid #F8D136;
-    background: rgba(249, 203, 109, 0.00);
-    color: #F8D136;
-    text-align: center;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.cta-banner-content h2 {
-    color: #FFF;
-    text-align: center;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.more-usp-container {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    width: 535px;
-}
-
-.more-usp {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: #F4F4F4;
-    padding-bottom: 50px;
-}
-
-.more-usp-container h3 {
-    color: #234B93;
-    text-align: center;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 48px;
-    font-weight: 600;
-}
-
-.more-usp-container p {
-    color: #355268;
-    text-align: center;
-    font-family: "CodeNext-SemiBold", sans-serif;
-    font-size: 24px;
-    line-height: 1.5;
-}
-
-.tutorial {
-    width: 100%;
-    max-height: 800px;
-    height: 100%;
-    flex: 1;
-}
-
-.social-link {
-    text-decoration: none;
-}
-
-/* Section wrapper */
 .partners {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #fff;
-    /* Example background color */
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
 }
 
-/* Section heading (adjust as needed) */
-.partners h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
-    /* Add styles here, like color, font-weight, etc. */
-}
-
-/* Container for the logos */
 .partner-logos {
-    /* Using CSS Grid with auto-fit so the logos 
-       automatically wrap based on screen size */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    /* centers the grid container */
-    align-items: center;
-    /* vertically centers logos in each cell */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
 }
 
-/* Single logo container */
 .partner-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Logo images */
 .partner-logo img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Optional hover effect */
 .partner-logo:hover img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+.join {
+  padding: 5rem 5rem 0 5rem;
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.join-text-black {
+  color: var(--dark-gray);
+}
 
 .footer-cta {
-    background-image: url("assets/imgs/edge-boost-footer.png");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-image: url("assets/imgs/edge-boost-footer.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-logo {
-    width: 600px;
+  margin-bottom: 2rem;
 }
 
 footer {
-    background-color: #000;
-    color: rgb(200, 200, 200);
-    font-family: "CodeNext-SemiBold", sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 50px;
-    justify-content: center;
-    align-items: center;
+  background-color: #000;
+  color: rgb(200, 200, 200);
+  font-family: "CodeNext-SemiBold", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 footer a {
-    color: rgb(200, 200, 200);
+  color: rgb(200, 200, 200);
 }
 
 .footer-menu {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
 }
 
 .footer-menu a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.card {
+@media (max-width: 992px) {
+  .perks {
+    padding: 1rem;
+  }
+
+  .ambassadors,
+  .testimonials {
+    padding: 1rem 1rem 5rem 1rem;
+  }
+
+  .earning,
+  .join,
+  .spending,
+  .responsible-gaming {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .promo-text {
+    position: static;
+    margin-top: 2rem;
+    text-wrap: none;
+    z-index: 999;
+  }
+
+  .title {
+    margin: 3rem 0;
+  }
+
+  .highlight {
+    font-size: 32px;
+  }
+
+  header {
+    height: 100vh;
+  }
+  .header {
+    flex-direction: column;
+    padding: 3rem 0.5rem;
+  }
+  .header-text-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .header-img-container {
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+  .edge-card,
+  .gambler,
+  .playing-cards {
+    position: relative;
     width: 100%;
     height: auto;
-}
+  }
 
-.usp img {
-    width: 100%;
+  .gambler {
+    right: -100px;
+  }
+
+  .edge-topnav {
+    padding: 1rem;
     height: auto;
-    max-width: 300px;
+  }
+
+  .blue-banner {
+    padding: 1rem;
+  }
+  .banner-item {
+    padding: 1rem 0;
+  }
+  .topnav-logo {
+    height: 15px;
+  }
+  #ambassadorCarouselDesktop,
+  #testimonialCarouselDesktop {
+    display: none;
+  }
+  #ambassadorCarouselMobile,
+  #testimonialCarouselMobile {
+    display: block;
+  }
+
+  .header-text-container,
+  .earning-text-content,
+  .responsible-gaming-text-content,
+  .spending-text-content {
+    width: 100%;
+  }
+
+  .perk-card {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .action-btn {
+    font-size: 14px;
+  }
+
+  .spending-text-content,
+  .earning-text-content,
+  .header-text-container,
+  .secure-text,
+  .responsible-gaming-text-content {
+    width: auto;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 
+@media (max-width: 320px) {
+  .top-action-btn {
+    margin-right: auto
+  }
 
-@media (max-width:1300px) {
-    .testimonial-carousel {
-        overflow-x: auto;
-        display: flex;
-        gap: 3rem;
-    }
+  .action-btn {
+    font-size: 12px;
+    padding: .25rem .25rem
+  }
 
-    .arrow {
-        display: block;
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .testimonial-card {
-        position: relative;
-        height: 25rem;
-        min-width: 14rem;
-        background-color: white;
-        color: black;
-        padding: 2rem;
-        font-size: 14px;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 1rem;
-        overflow: auto;
-    }
-
-    .large {
-        display: none;
-    }
-
-    .small {
-        display: block;
-    }
-
-    .content-overlay {
-        top: 0;
-        height: 100%;
-    }
-
-    .hero-content {
-        align-items: center;
-    }
-
-    .sign-in-button {
-        width: 200px;
-        margin: 0 auto;
-        z-index: 5;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    .break {
-        display: block;
-    }
-
-}
-
-@media (min-width:1300px) {
-    .large {
-        display: block;
-    }
-
-    .small {
-        display: none;
-    }
-
-    .visa-logo {
-        width: 100px;
-    }
-}
-
-@media (max-width:800px) {
-    .testimonial-header {
-        text-align: center;
-        background-color: #234B93;
-        font-size: 24px;
-    }
-
-    .poker-text {
-        text-align: center;
-    }
-
-    .ambassador-header {
-        text-align: center;
-        color: #234B93;
-        font-size: 24px;
-    }
-
-    .partners h2 {
-        font-size: 1.5rem;
-    }
-
-    .partner-logos {
-        gap: 15px;
-    }
-
-    .usp {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .usp-video {
-        height: 50vh;
-    }
-
-    .usp img {
-        width: 100%;
-        height: auto;
-        max-width: 200px;
-    }
-
-    .usp-description {
-        text-align: center;
-        width: 100%;
-    }
-
-    .tagline,
-    .benefits {
-        font-size: 1.4em;
-        text-align: center;
-    }
-
-    .usp-description h3 {
-        font-size: 2em;
-    }
-
-    .usp-description p {
-        font-size: 16px;
-    }
-
-    .cta-banner-content h2 {
-        font-size: 21px;
-    }
-
-    .more-usp {
-        gap: 25px;
-        align-items: start;
-    }
-
-    .more-usp-container {
-        padding: 0px;
-        gap: 25px;
-    }
-
-    .more-usp-container img {
-        width: 100%;
-        height: auto;
-        max-width: 200px;
-    }
-
-    .more-usp-container h3 {
-        font-size: 2em;
-    }
-
-    .more-usp-container p {
-        font-size: 16px;
-    }
-
-    .footer-menu {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  .navbar-toggler.ms-3 {
+    margin-left: 0 !important;
+  }
+  
 }
