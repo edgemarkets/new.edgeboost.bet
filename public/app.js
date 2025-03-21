@@ -1,78 +1,49 @@
-/* ---- Carousel ---- */
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-let currentIndex = 0;
+$(document).ready(function () {
+  // Configure Everflow tracking
+  EF.configure({
+    tld: "edgeboost.bet",
+  });
+  window.EF = EF;
 
-function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+  // Get affiliate tracking parameters
+  const affid = window.EF.urlParameter("affid");
+  const oid = window.EF.urlParameter("oid");
 
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
-});
-
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
-});
-
-/* ---- Carousel End ---- */
-
-var $animation_elements = $(".animation-element");
-var $window = $(window);
-function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = window_top_position + window_height;
-
-    $.each($animation_elements, function () {
-        var $element = $(this);
-        var element_height = $element.outerHeight();
-
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = element_top_position + element_height;
-
-        //check to see if this current container is within viewport
-        if (
-            element_bottom_position >= window_top_position &&
-            element_top_position <= window_bottom_position
-        ) {
-            $element.addClass("in-view");
-        } else {
-            $element.removeClass("in-view");
-        }
+  // If both tracking parameters are present
+  if (affid && oid) {
+    // Track the click event
+    window.EF.click({
+      offer_id: oid,
+      affiliate_id: affid,
     });
 
-    if (
-        $("a.sign-up").offset().top + $("a.sign-up").outerHeight() >=
-        window_top_position
-    ) {
-        $(".sign-in-button").css({ display: "none" });
+    // Build the tracking query string
+    const trackingParams = `?oid=${oid}&affid=${affid}`;
 
-    } else {
-        $(".sign-in-button").fadeIn()
-    }
-}
+    // List of all signup/signin link selectors
+    const linkSelectors = [
+      ".action-btn", // Call to Action buttons
+      ".top-sign-up", // Floating signup button
+      'a[href*="/account/register"]', // Any registration links
+      'a[href*="/account/login"]', // Any login links
+    ];
 
-$window.on("scroll resize", function () {
-    check_if_in_view();
-});
-$window.trigger("scroll");
-$(document).ready(function () {
-    $.get(
-        "https://api.edgeboost.io/api/v2/states/whitelist",
-        function (data, status) {
-            if (status) {
-                var state_codes = [];
-                var state_data = data || [];
-                for (var i = 0; i < state_data.length; i++) {
-                    state_codes.push(data[i].code); // Changed from .name to .code
-                }
-                $("#whitelist_sections").html(state_codes.join(", ") + ".");
-            }
-        }
-    );
+    // Modify all relevant links
+    linkSelectors.forEach((selector) => {
+      $(selector).each(function () {
+        const $link = $(this);
+        const baseUrl = $link.attr("href").split("?")[0]; // Remove any existing query params
+        $link.attr("href", baseUrl + trackingParams);
+      });
+    });
+
+    // Log for debugging
+    console.log("Everflow Affiliate tracking parameters added:", {
+      affid: affid,
+      oid: oid,
+      trackingParams: trackingParams,
+    });
+  } else {
+    console.log("No affiliate tracking parameters found in URL");
+  }
 });
