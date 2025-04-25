@@ -34,91 +34,18 @@ section.invite {
   color: #717680;
 }
 
-/* Body background and typography */
-body {
-  background-color: #f5f7fa;
-  font-family: "Arial", sans-serif;
-}
-
-
-/* Form label style */
-.form-label {
-  color: #717680;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-/* Form input fields */
-.form-control {
-  background-color: #343c47;
-  color: #fff;
-  border: 1px solid #343c47;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.form-control:focus {
-  background-color: #343c47;
-  border-color: #f8c761;
-  box-shadow: none;
-  color: #fff;
-}
-
-/* Input group for phone number */
-.input-group .form-select {
-  background-color: #343c47;
-  color: #fff;
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
-}
-
-.input-group .form-control {
-  border-radius: 0 8px 8px 0;
-  background-color: #343c47;
-  color: #fff;
-  border-left: 0;
-}
-
-
-
-/* Button hover effects */
-.d-grid .btn-primary:focus {
-  outline: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 .blue-banner {
-    background-color: #22272f
+  background-color: #22272f;
 }
 
 .gold-numbers {
-    font-size: 48px;
-    color: #d4af37;
+  font-size: 48px;
+  color: #d4af37;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 767px) {
-  .card {
-    padding: 20px;
-  }
-
-  .card h2 {
-    font-size: 1.5rem;
-  }
-
-  .form-label {
-    font-size: 0.8rem;
-  }
-
-  .form-control {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
   .gold-numbers {
     font-size: 32px;
   }
-
 }

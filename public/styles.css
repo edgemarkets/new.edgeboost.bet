@@ -621,6 +621,17 @@ a.link {
     margin-right: auto;
   }
 
+  .banner-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 25%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+  }
+
   .birches-health-logo {
     height: 20px;
   }
