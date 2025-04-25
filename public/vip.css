@@ -1,0 +1,51 @@
+section.invite {
+  background-image: url(../assets/imgs/invite-form-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.edgeboost-logo {
+  max-height: 50px;
+  width: auto;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.light-black-bg {
+  background-color: #22272f;
+}
+
+.edge-blue-bg {
+  background-color: #05baff;
+}
+
+.dark-gray-bg {
+  background-color: #343c47;
+}
+
+.text-edge-blue {
+  color: #05baff;
+}
+
+.text-light-gray {
+  color: #717680;
+}
+
+.blue-banner {
+  background-color: #22272f;
+}
+
+.gold-numbers {
+  font-size: 48px;
+  color: #d4af37;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .gold-numbers {
+    font-size: 32px;
+  }
+}
