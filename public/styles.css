@@ -243,6 +243,14 @@ h1 {
   border: 0;
 }
 
+.wsop-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 .carousel-indicators .active {
   background-color: var(--main-blue) !important;
 }
