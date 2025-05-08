@@ -353,7 +353,7 @@ h1 {
 }
 
 .perks {
-  padding: 5rem;
+  padding: 3rem 1rem;
   background-color: var(--dark-gray);
   color: white;
   text-align: center;
